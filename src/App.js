@@ -8,88 +8,64 @@ import './App.css';
 
 const rowData = [
   {
-    id: 1,
-    email: 'george.bluth@reqres.in',
-    first_name: 'George',
-    last_name: 'Bluth',
-    avatar: 'https://reqres.in/img/faces/1-image.jpg'
+    "id": 2,
+    "symbol": "MSFT",
+    "name": "Microsoft Corporation",
+    "current_price": 340.25,
+    "open_price": 335.00,
+    "high_price": 342.50,
+    "low_price": 330.00,
+    "close_price": 340.25,
+    "market_cap": "2.5T",
+    "pe_ratio": 31.2,
+    "dividend_yield": "0.85%",
+    "52_week_range": "280.00 - 350.00",
+    "volume": 43210000
   },
   {
-    id: 2,
-    email: 'janet.weaver@reqres.in',
-    first_name: 'Janet',
-    last_name: 'Weaver',
-    avatar: 'https://reqres.in/img/faces/2-image.jpg'
+    "id": 3,
+    "symbol": "GOOGL",
+    "name": "Alphabet Inc.",
+    "current_price": 2750.00,
+    "open_price": 2700.00,
+    "high_price": 2780.00,
+    "low_price": 2680.00,
+    "close_price": 2750.00,
+    "market_cap": "1.8T",
+    "pe_ratio": 23.5,
+    "dividend_yield": "N/A",
+    "52_week_range": "2200.00 - 2900.00",
+    "volume": 1234560
   },
   {
-    id: 3,
-    email: 'emma.wong@reqres.in',
-    first_name: 'Emma',
-    last_name: 'Wong',
-    avatar: 'https://reqres.in/img/faces/3-image.jpg'
+    "id": 4,
+    "symbol": "AMZN",
+    "name": "Amazon.com Inc.",
+    "current_price": 3300.00,
+    "open_price": 3250.00,
+    "high_price": 3350.00,
+    "low_price": 3200.00,
+    "close_price": 3300.00,
+    "market_cap": "1.6T",
+    "pe_ratio": 60.2,
+    "dividend_yield": "N/A",
+    "52_week_range": "2900.00 - 3500.00",
+    "volume": 9876540
   },
   {
-    id: 4,
-    email: 'eve.holt@reqres.in',
-    first_name: 'Eve',
-    last_name: 'Holt',
-    avatar: 'https://reqres.in/img/faces/4-image.jpg'
-  },
-  {
-    id: 5,
-    email: 'charles.morris@reqres.in',
-    first_name: 'Charles',
-    last_name: 'Morris',
-    avatar: 'https://reqres.in/img/faces/5-image.jpg'
-  },
-  {
-    id: 6,
-    email: 'tracey.ramos@reqres.in',
-    first_name: 'Tracey',
-    last_name: 'Ramos',
-    avatar: 'https://reqres.in/img/faces/6-image.jpg'
-  },
-  {
-    id: 7,
-    email: 'michael.lawson@reqres.in',
-    first_name: 'Michael',
-    last_name: 'Lawson',
-    avatar: 'https://reqres.in/img/faces/7-image.jpg'
-  },
-  {
-    id: 8,
-    email: 'lindsay.ferguson@reqres.in',
-    first_name: 'Lindsay',
-    last_name: 'Ferguson',
-    avatar: 'https://reqres.in/img/faces/8-image.jpg'
-  },
-  {
-    id: 9,
-    email: 'tobias.funke@reqres.in',
-    first_name: 'Tobias',
-    last_name: 'Funke',
-    avatar: 'https://reqres.in/img/faces/9-image.jpg'
-  },
-  {
-    id: 10,
-    email: 'byron.fields@reqres.in',
-    first_name: 'Byron',
-    last_name: 'Fields',
-    avatar: 'https://reqres.in/img/faces/10-image.jpg'
-  },
-  {
-    id: 11,
-    email: 'george.edwards@reqres.in',
-    first_name: 'George',
-    last_name: 'Edwards',
-    avatar: 'https://reqres.in/img/faces/11-image.jpg'
-  },
-  {
-    id: 12,
-    email: 'rachel.howell@reqres.in',
-    first_name: 'Rachel',
-    last_name: 'Howell',
-    avatar: 'https://reqres.in/img/faces/12-image.jpg'
+    "id": 5,
+    "symbol": "TSLA",
+    "name": "Tesla Inc.",
+    "current_price": 695.00,
+    "open_price": 680.00,
+    "high_price": 700.00,
+    "low_price": 670.00,
+    "close_price": 695.00,
+    "market_cap": "700B",
+    "pe_ratio": 80.5,
+    "dividend_yield": "N/A",
+    "52_week_range": "600.00 - 800.00",
+    "volume": 4567890
   }
 ];
 
@@ -101,10 +77,7 @@ function App() {
   return (
     <div className="App">
       <h2>
-        Implement AG Grid in React -{' '}
-        <a href="https://www.cluemediator.com" target="_blank">
-          Clue Mediator
-        </a>
+        Implement AG Grid in React
       </h2>
       <div className="ag-theme-alpine ag-style">
         <AgGridReact
@@ -113,32 +86,66 @@ function App() {
           rowData={rowData}
         >
           <AgGridColumn
-            field="first_name"
-            headerName="First Name"
+            field="id"
+            headerName="ID"
             sortable={true}
             filter={true}
             cellClass="vertical-middle"
           />
           <AgGridColumn
-            field="last_name"
-            headerName="Last Name"
+            field="symbol"
+            headerName="Symbol"
             sortable={true}
             filter={true}
             cellClass="vertical-middle"
           />
           <AgGridColumn
-            field="email"
-            headerName="Email"
+            field="name"
+            headerName="Name"
             sortable={true}
             filter={true}
             cellClass="vertical-middle"
           />
           <AgGridColumn
-            field="avatar"
-            headerName="Avatar"
+            field="current_price"
+            headerName="Current Price"
             sortable={true}
             filter={true}
-            cellRendererFramework={avatarFormatter}
+            cellClass="vertical-middle"
+          />
+          <AgGridColumn
+            field="market_cap"
+            headerName="Market Cap"
+            sortable={true}
+            filter={true}
+            cellClass="vertical-middle"
+          />
+          <AgGridColumn
+            field="pe_ratio"
+            headerName="P/E Ratio"
+            sortable={true}
+            filter={true}
+            cellClass="vertical-middle"
+          />
+          <AgGridColumn
+            field="dividend_yield"
+            headerName="Dividend Yield"
+            sortable={true}
+            filter={true}
+            cellClass="vertical-middle"
+          />
+          <AgGridColumn
+            field="52_week_range"
+            headerName="52 Week Range"
+            sortable={true}
+            filter={true}
+            cellClass="vertical-middle"
+          />
+          <AgGridColumn
+            field="volume"
+            headerName="Volume"
+            sortable={true}
+            filter={true}
             cellClass="vertical-middle"
           />
         </AgGridReact>
